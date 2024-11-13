@@ -1,0 +1,91 @@
+use macroquad::prelude::*;
+
+pub fn min<T: PartialOrd + Copy>(a: T, b: T) -> T {
+    if a > b { a } else { b }
+}
+
+pub fn key_code_to_char(key_code: KeyCode, shift: bool) -> Option<char> {
+    if !shift {
+        match key_code {
+            KeyCode::A => Some('a'),
+            KeyCode::B => Some('b'),
+            KeyCode::C => Some('c'),
+            KeyCode::D => Some('d'),
+            KeyCode::E => Some('e'),
+            KeyCode::F => Some('f'),
+            KeyCode::G => Some('g'),
+            KeyCode::H => Some('h'),
+            KeyCode::I => Some('i'),
+            KeyCode::J => Some('j'),
+            KeyCode::K => Some('k'),
+            KeyCode::L => Some('l'),
+            KeyCode::M => Some('m'),
+            KeyCode::N => Some('n'),
+            KeyCode::O => Some('o'),
+            KeyCode::P => Some('p'),
+            KeyCode::Q => Some('q'),
+            KeyCode::R => Some('r'),
+            KeyCode::S => Some('s'),
+            KeyCode::T => Some('t'),
+            KeyCode::U => Some('u'),
+            KeyCode::V => Some('v'),
+            KeyCode::W => Some('w'),
+            KeyCode::X => Some('x'),
+            KeyCode::Y => Some('y'),
+            KeyCode::Z => Some('z'),
+            KeyCode::Key0 => Some('0'),
+            KeyCode::Key1 => Some('1'),
+            KeyCode::Key2 => Some('2'),
+            KeyCode::Key3 => Some('3'),
+            KeyCode::Key4 => Some('4'),
+            KeyCode::Key5 => Some('5'),
+            KeyCode::Key6 => Some('6'),
+            KeyCode::Key7 => Some('7'),
+            KeyCode::Key8 => Some('8'),
+            KeyCode::Key9 => Some('9'),
+            KeyCode::Space => Some(' '),
+            KeyCode::Minus => Some('-'),
+            KeyCode::Slash => Some('/'),
+
+            _ => None,
+        }
+    } else {
+        match key_code {
+            KeyCode::A => Some('A'),
+            KeyCode::B => Some('B'),
+            KeyCode::C => Some('C'),
+            KeyCode::D => Some('D'),
+            KeyCode::E => Some('E'),
+            KeyCode::F => Some('F'),
+            KeyCode::G => Some('G'),
+            KeyCode::H => Some('H'),
+            KeyCode::I => Some('I'),
+            KeyCode::J => Some('J'),
+            KeyCode::K => Some('K'),
+            KeyCode::L => Some('L'),
+            KeyCode::M => Some('M'),
+            KeyCode::N => Some('N'),
+            KeyCode::O => Some('O'),
+            KeyCode::P => Some('P'),
+            KeyCode::Q => Some('Q'),
+            KeyCode::R => Some('R'),
+            KeyCode::S => Some('S'),
+            KeyCode::T => Some('T'),
+            KeyCode::U => Some('U'),
+            KeyCode::V => Some('V'),
+            KeyCode::W => Some('W'),
+            KeyCode::X => Some('X'),
+            KeyCode::Y => Some('Y'),
+            KeyCode::Z => Some('Z'),
+            KeyCode::Key0 => Some(')'),
+            KeyCode::Key5 => Some('%'),
+            KeyCode::Key6 => Some('^'),
+            KeyCode::Key8 => Some('*'),
+            KeyCode::Key9 => Some('('),
+            KeyCode::Space => Some(' '),
+            KeyCode::Equal => Some('+'),
+            // Add more characters as needed
+            _ => None,
+        }
+    }
+}
